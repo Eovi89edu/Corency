@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ 
+    <h1 class="title">Corency</h1>
+  <main class="converter">
+
+    <section class="panel">
+      <h2 class="panel-title">From</h2>
+      <input id="amount" type="number" value="100" min="1" inputmode="decimal">
+      <select id="baseCurrency"></select>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="panel">
+      <h2 class="panel-title">To</h2>
+      <div id="targetsContainer"></div>
+      <button id="addTargetBtn" type="button">Add Currency</button>
+    </section>
+  </main>
+  <button id="convertbtn" type="button">Convert</button>
+  <script src="script.js"></script>
+</body>
+</html>
