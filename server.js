@@ -4,8 +4,10 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-// Here we use public instead on ".", cuz we want node to serve stuff from "public" folder
-app.use(express.static("public"));   // serves your HTML/JS
+// Serve static files from /public folder (useful when running Node locally, optional on Vercel).
+app.use(express.static('public'))
+// Define index.html as the root explicitly (useful on Vercel, optional when running Node locally).
+app.get('/', (req, res) => { res.redirect('/index.html') })
 
 app.get("/api/currencies", async (req, res) => {
   const r = await fetch(`https://api.currencyapi.com/v3/currencies?apikey=${process.env.API_KEY}`);
